@@ -7,6 +7,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
 import { CompteComponent } from './compte/compte.component';
+import { LoginComponent } from './login/login.component';
+import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { CompteComponent } from './compte/compte.component';
     FooterComponent,
     HeaderComponent,
     PokemonsComponent,
-    CompteComponent
+    CompteComponent,
+    LoginComponent,
+    PokemonDetailsComponent
   ],
   imports: [
     BrowserModule,
