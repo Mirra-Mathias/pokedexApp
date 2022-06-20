@@ -1,0 +1,12 @@
+footer {
+    height: 600px;
+    background-image: url('/assets/wallpapers/wallpaper_footer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+@media all and (max-width: 1000px) {
+  footer {
+    height: 450px;
+  }
+}

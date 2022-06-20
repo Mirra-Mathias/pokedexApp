@@ -1,0 +1,17 @@
+.pokemonsPage .LisntingPokemons .item {
+    width: 20%;
+}
+.pokemonsPage .waves {
+    position: absolute;
+    width: 100%;
+    top: -10%;
+    z-index: -1;
+    left: 0;
+    opacity: .4;
+}
+.pokemonsPage .absoluteMew {
+    position: absolute;
+    right: -200px;
+    top: 1200px;
+    z-index: -1;
+}

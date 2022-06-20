@@ -1,1 +1,145 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+:root {
+    --color-1: #7f141b;
+    --color-2: #f7b2bb;
+    --color-2-1: #f7dee1;
+    --color-3: rgb(218 69 78);
+    --color-4: #f8ccaa;
+    --color-5: #de928f;
+    --background-color: #f5f5f5;
+}
+
+*, html {
+    font-family: 'Roboto';
+    color: black;
+    margin: 0;
+    font-weight: 600;
+}
+html {
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}
+
+a {
+    transition: .3s ease-in;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.container {
+    margin: 6rem 12rem ;
+}
+.banner {
+    width: 100%;
+    height: 300px;
+}
+.banner img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.btn {
+    color: white;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+.btn_rose {
+    background-color: var(--color-2);
+    border: 1px solid var(--color-2);
+}
+.btn_rose:hover {
+    background-color: var(--color-3);
+    border: 1px solid var(--color-3);
+}
+.btn_orange {
+    background-color: var(--color-4);
+    border: 1px solid var(--color-4);
+}
+.btn_orange:hover {
+    background-color: var(--color-5);
+    border: 1px solid var(--color-5);
+}
+.round {
+    position: absolute;
+    border: 1px solid transparent;
+    border-radius: 100%;
+}
+.square_rounded {
+    position: absolute;
+    border: 1px solid transparent;
+    border-radius: 20px;
+}
+
+@media all and (max-width: 1400px) {
+    .container {
+        margin: 4rem 8rem ;
+    }
+}
+@media all and (max-width: 1250px) {
+    .container {
+        margin: 4rem 6rem ;
+    }
+}
+
+
+.LisntingPokemons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.LisntingPokemons .item {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 1rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+    background-color: var(--background-color);
+}
+.LisntingPokemons .item .types {
+    display: flex;
+    justify-content: flex-end;
+}
+.LisntingPokemons .item .types .roundType {
+    width: 12px;
+    height: 12px;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    margin: 2px;
+}
+.LisntingPokemons .item .imgContain {
+    width: 100%;
+    height: 300px;
+}
+.LisntingPokemons .item .imgContain img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.LisntingPokemons .item .content {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.LisntingPokemons .item .content .name {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #626262;
+    text-transform: uppercase;
+}
+
+@media all and (max-width: 1550px) {
+    .LisntingPokemons .item .imgContain {
+        height: 250px;
+    }
+}
+@media all and (max-width: 1250px) {
+    .LisntingPokemons .item .imgContain {
+        height: 200px;
+    }
+}
