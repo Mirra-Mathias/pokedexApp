@@ -15,7 +15,7 @@ export class RoutesService {
     headers: new HttpHeaders({'Content-Type': 'application/json'}),
   };
 
-  getPokemons(): any {
+  getPokemons(lang:any): any {
     return new Promise((resolve, reject) => {
       const apiURL = environment.apiUrl + 'pokemons/language/:lang';
       this.http
@@ -32,7 +32,7 @@ export class RoutesService {
     });
   }
 
-  getEquipe(): any {
+  getEquipe(id:any): any {
     return new Promise((resolve, reject) => {
       const apiURL = environment.apiUrl + 'equipe/Equipe/:id';
       this.http
@@ -49,7 +49,7 @@ export class RoutesService {
     });
   }
 
-  getEquipeDetails(): any {
+  getEquipeDetails(id:any): any {
     return new Promise((resolve, reject) => {
       const apiURL = environment.apiUrl + 'equipe/Details/:id';
       this.http
@@ -89,7 +89,7 @@ export class RoutesService {
 
   editPokemonInEquipe(IdPokemon: any): any {
     return new Promise((resolve, reject) => {
-      const apiURL = environment.apiUrl + 'equipe/Edit/:id';
+      const apiURL = environment.apiUrl + 'equipe/Edit/:IdPokemon';
       this.http
         .post(
           apiURL,
@@ -129,7 +129,7 @@ export class RoutesService {
     });
   }
 
-  getuser(): any {
+  getuser(id:any): any {
     return new Promise((resolve, reject) => {
       const apiURL = environment.apiUrl + 'users/:id';
       this.http
