@@ -5,6 +5,7 @@ import {HeaderComponent} from "./header/header.component";
 import {PokemonsComponent} from "./pokemons/pokemons.component";
 import {CompteComponent} from "./compte/compte.component";
 import {LoginComponent} from "./login/login.component";
+import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
   {path: 'footer', component: FooterComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'pokemons', component: PokemonsComponent},
   {path: 'compte', component: CompteComponent},
   {path: 'login', component: LoginComponent},
+  {path: '', component: HomeComponent},
   {path: 'pokemonsDetails/:id', component: CompteComponent}];
 
 @NgModule({
