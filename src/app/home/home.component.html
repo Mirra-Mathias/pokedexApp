@@ -9,6 +9,23 @@
           <a href="/connexion" title="Page Connexion" class="btn btn_rose">Connexion</a>
         </div>
       </section>
-
-
+      <section class="containerListing container">
+        <div class="ListingPokemons">
+          <div class="item" *ngFor="let pokemon of pokemons.slice(0,9)">
+            <div class="types">
+                <div *ngIf="pokemon?.type0" class="roundType roundType0" style="{{pokemonService.colorType(pokemon?.type0)}}"></div>
+                <div *ngIf="pokemon?.type1" class="roundType roundType1" style="{{pokemonService.colorType(pokemon?.type1)}}"></div>
+            </div>
+            <div class="imgContain">
+                <img src="{{pokemonService.getImg(pokemon?.id)}}" />
+            </div>
+            <div class="content">
+                <p class="name">#{{ pokemonService.changeID(pokemon?.id) }} {{ pokemon?.name }}</p>
+                <a href="{{pokemonService.generateURL(pokemon?.name, pokemon?.id)}}" title="'Page détails : ' + {{pokemon?.name}}" class="btn btn_orange">En savoir plus</a>
+            </div>
+          </div>
+        </div>
+        <a href="/pokemons" title="Page listing Pokemons" class="btn btn_rose">Voir plus</a>
+      </section>
+    
 </div>

@@ -17,12 +17,14 @@ export class RoutesService {
 
   getPokemons(): any {
     return new Promise((resolve, reject) => {
-      const apiURL = environment.apiUrl + 'pokemons/language/:lang';
+      console.log(environment.apiUrl)
+      const apiURL = environment.apiUrl + 'pokemons/language/french';
       this.http
         .get(apiURL)
         .toPromise()
         .then(
           (success) => {
+            console.log(success)
             resolve(success);
           },
           (msg) => {
