@@ -25,11 +25,11 @@ export class HomeComponent implements OnInit {
   constructor(private route:RoutesService, public pokemonService:PokemonsService) { }
 
   ngOnInit(): void {
-    this.route.getPokemons().then((pokemons:Pokemon[]) => {
+    this.route.getPokemons("french").then((pokemons:Pokemon[]) => {
       this.pokemons = pokemons
     })
   }
 
-  
+
 
 }

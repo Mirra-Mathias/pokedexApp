@@ -16,14 +16,30 @@
     </div>
     <div class="filters">
 
-        filtres : 
-        par type 
+        filtres :
+        par type
 
-        ordre : 
+        ordre :
         alphabetique
         id
     </div>
 
-    
+    <div class="ListingPokemons">
+      <div class="item" *ngFor="let pokemon of pokemons">
+        <div class="types">
+          <div *ngIf="pokemon?.type0" class="roundType roundType0" style="{{pokemonService.colorType(pokemon?.type0)}}"></div>
+          <div *ngIf="pokemon?.type1" class="roundType roundType1" style="{{pokemonService.colorType(pokemon?.type1)}}"></div>
+        </div>
+        <div class="imgContain">
+          <img src="{{pokemonService.getImg(pokemon?.id)}}" />
+        </div>
+        <div class="content">
+          <p class="name">#{{ pokemonService.changeID(pokemon?.id) }} {{ pokemon?.name }}</p>
+          <a href="{{pokemonService.generateURL(pokemon?.name, pokemon?.id)}}" title="'Page détails : ' + {{pokemon?.name}}" class="btn btn_orange">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+
+
     <img src="/img/wallpapers/our-waves-2.png" alt="Vagues" class="waves" />
 </div>

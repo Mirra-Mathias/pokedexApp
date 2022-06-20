@@ -18,7 +18,7 @@ export class RoutesService {
   getPokemons(lang:any): any {
     return new Promise((resolve, reject) => {
       console.log(environment.apiUrl)
-      const apiURL = environment.apiUrl + 'pokemons/language/french';
+      const apiURL = environment.apiUrl + 'pokemons/language/:lang';
       this.http
         .get(apiURL)
         .toPromise()
