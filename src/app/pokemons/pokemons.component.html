@@ -35,7 +35,7 @@
         </div>
         <div class="content">
           <p class="name">#{{ pokemonService.changeID(pokemon?.id) }} {{ pokemon?.name }}</p>
-          <a href="{{pokemonService.generateURL(pokemon?.name, pokemon?.id)}}" title="Page détails : {{pokemon?.name}}" class="btn btn_orange">En savoir plus</a>
+          <a (click)="paramsPokemon(pokemon.id)" title="Page détails : {{pokemon?.name}}" class="btn btn_orange">En savoir plus</a>
         </div>
       </div>
     </div>

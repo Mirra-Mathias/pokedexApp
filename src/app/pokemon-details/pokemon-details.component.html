@@ -1,1 +1,55 @@
-<p>pokemon-details works!</p>
+<div class="PokemonDetails container">
+  <div class="imgContain">
+    <img src="{{pokemonService.getImg(pokemon?.id)}}" />
+  </div>
+  <div class="content">
+    <div class="title">
+      <h1 class="nameP"><span class="idP">#{{pokemonService.changeID(pokemon?.id) }} </span>{{ pokemon?.name }}</h1>
+    </div>
+
+    <div class="types">
+      <h2>Types</h2>
+      <div class="items">
+        <div class="type" *ngIf="pokemon?.type0">
+          <div class="roundType roundType0" style="{{pokemonService.colorType(pokemon?.type0)}}"></div>
+          <p>{{ pokemon?.type0 }}</p>
+        </div>
+        <div class="type" *ngIf="pokemon?.type1">
+          <div class="roundType roundType1" style="{{pokemonService.colorType(pokemon?.type1)}}"></div>
+          <p>{{ pokemon?.type1 }}</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="skills">
+      <h2>Statistiques de base</h2>
+      <div class="items">
+        <div class="item borderL">
+          <p class="title">Points de vie</p>
+          <p>{{ pokemon?.baseHP }}</p>
+        </div>
+        <div class="item borderL">
+          <p class="title">Attaque</p>
+          <p>{{ pokemon?.baseAttack }}</p>
+        </div>
+        <div class="item borderL">
+          <p class="title">Défense</p>
+          <p>{{ pokemon?.baseDefense }}</p>
+        </div>
+        <div class="item borderL">
+          <p class="title">Attaque spéciale</p>
+          <p>{{ pokemon?.baseSp_Attack }}</p>
+        </div>
+        <div class="item borderL">
+          <p class="title">Défense spéciale</p>
+          <p>{{ pokemon?.baseSp_Defense }}</p>
+        </div>
+        <div class="item">
+          <p class="title">Vitesse</p>
+          <p>{{ pokemon?.baseSpeed }}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

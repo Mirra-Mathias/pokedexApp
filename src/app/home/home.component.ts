@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonsService } from '../pokemons.service';
 import { RoutesService } from '../routes.service';
+import {Router} from "@angular/router";
 
 export interface Pokemon {
   baseAttack?: number,
@@ -22,7 +23,7 @@ export interface Pokemon {
 export class HomeComponent implements OnInit {
   public pokemons: Pokemon[] = [];
 
-  constructor(private route:RoutesService, public pokemonService:PokemonsService) { }
+  constructor(private route:RoutesService, public pokemonService:PokemonsService, private router: Router) { }
 
   ngOnInit(): void {
     this.route.getPokemons("french").then((pokemons:Pokemon[]) => {
@@ -30,6 +31,12 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  paramsPokemon(id:number | undefined) {
+    if (id === undefined){
+      return;
+    }
+    this.router.navigate(["pokemon"], {queryParams: {id}}).then(r => r)
+  }
 
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {RoutesService} from "../routes.service";
 import {PokemonsService} from "../pokemons.service";
 import {ActivatedRoute} from '@angular/router';
+import { Router } from '@angular/router';
 
 export interface Pokemon {
   baseAttack?: number,
@@ -22,19 +23,17 @@ export interface Pokemon {
 })
 export class PokemonDetailsComponent implements OnInit {
   public pokemons: Pokemon[] = [];
-  public pokemon: Pokemon = {};
+  public pokemon: Pokemon | undefined = {};
 
   constructor(private route:RoutesService, public pokemonService:PokemonsService, private routeA: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.routeA.queryParams.subscribe(async (params) => {
       this.route.getPokemons("french").then((pokemons:Pokemon[]) => {
-        this.pokemons = pokemons
+        const param = parseInt(params['id'])
+        this.pokemon = pokemons.find(p => p.id === param)
       })
     })
-    
-
-
   }
 
 }

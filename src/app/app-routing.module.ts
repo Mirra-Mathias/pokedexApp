@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'compte', component: CompteComponent},
   {path: 'login', component: LoginComponent},
   {path: '', component: HomeComponent},
-  {path: 'pokemons/:name-:id', component: PokemonDetailsComponent}];
+  {path: 'pokemon', component: PokemonDetailsComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
