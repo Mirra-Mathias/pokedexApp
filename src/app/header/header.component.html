@@ -1,0 +1,32 @@
+<header>
+  <div class="logo_img">
+    <a [routerLink]="['pokemons']"><img src="../../assets/logo/pokemon_logo.png"/></a>
+  </div>
+  <div class="menuComputer">
+    <div class="links">
+      <p class="textLink">Page Liste des Pokémons</p>
+<!--      <nuxt-link to="/pokemons" title="Page Liste des Pokémons" class="textLink">Pokémons</nuxt-link>-->
+<!--      <nuxt-link to="/qui-sommes-nous" title="Page Qui sommes-nous ?" class="textLink">À propos</nuxt-link>-->
+    </div>
+    <div class="links connectionlinks">
+<!--      <nuxt-link to="/inscription" title="Page S'inscrire" class="signInLink">S'inscrire</nuxt-link>-->
+<!--      <nuxt-link to="/connexion" title="Page Se connecter" class="connectLink">Se connecter</nuxt-link>-->
+    </div>
+  </div>
+
+  <div class="menuPhone">
+    <i class="fa-solid fa-bars"></i>
+    <div v-if="showMenu" class="contentMenu">
+      <i class="fa-solid fa-xmark"></i>
+      <div class="links">
+        <a href="/pokemons" title="Page Liste des Pokémons" class="textLink">Pokémons</a>
+        <a href="/qui-sommes-nous" title="Page Qui sommes-nous ?" class="textLink">À propos</a>
+      </div>
+      <div class="links connectionlinks">
+        <a href="/inscription" title="Page S'inscrire" class="signInLink">S'inscrire</a>
+        <a href="/connexion" title="Page Se connecter" class="connectLink">Se connecter</a>
+      </div>
+    </div>
+  </div>
+
+</header>
