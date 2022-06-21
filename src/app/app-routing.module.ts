@@ -1,3 +1,4 @@
+import { InscriptionComponent } from './inscription/inscription.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {FooterComponent} from "./footer/footer.component";
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'pokemons', component: PokemonsComponent},
   {path: 'compte', component: CompteComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'inscription', component: InscriptionComponent},
   {path: '', component: HomeComponent},
   {path: 'pokemon', component: PokemonDetailsComponent}];
 

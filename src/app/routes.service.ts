@@ -12,7 +12,8 @@ export class RoutesService {
   }
 
   httpOptions = {
-    headers: new HttpHeaders({'Content-Type': 'application/json'}),
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'}),
   };
 
   getPokemons(lang:any): any {
@@ -148,7 +149,7 @@ export class RoutesService {
 
   register(name: any, password: any): any {
     return new Promise((resolve, reject) => {
-      const apiURL = environment.apiUrl + 'users/login';
+      const apiURL = environment.apiUrl + 'users/register';
       this.http
         .post(
           apiURL,

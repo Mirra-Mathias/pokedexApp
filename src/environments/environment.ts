@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://kitten-pokedex.azurewebsites.net/',
+  // apiUrl: 'https://kitten-pokedex.azurewebsites.net/',
+  apiUrl: 'https://localhost:5001/'
 };
 
 /*

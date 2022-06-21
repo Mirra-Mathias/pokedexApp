@@ -1,6 +1,6 @@
 <div class="Login container">
     <h1>Se connecter</h1>
-      <form>
+      <form [formGroup]="loginForm">
         <div class="_input">
           <label for="login">Indentifiant</label>
           <input type="text" name="login" id="login">
@@ -9,7 +9,6 @@
           <label for="password">Mot de passe</label>
           <input type="password" name="password" id="password">
         </div>
-        <div class="btn btn_rose">Connexion</div>
+        <button type="submit" (click)="login()" class="btn btn_rose">Connexion</button>
       </form>
-
   </div>
