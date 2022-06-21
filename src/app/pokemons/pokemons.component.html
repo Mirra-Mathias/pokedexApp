@@ -1,6 +1,12 @@
 <div class="pokemonsPage container">
     <div class="ListingPokemons">
       <div class="item" *ngFor="let pokemon of pokemons">
+        <div *ngIf="userId && maxSlot < 6">
+          <a (click)="addPokemon(pokemon.id)"><i class="fa-solid fa-plus"></i></a>
+        </div>
+        <div *ngIf="userId && idCard">
+          <a (click)="editPokemon(pokemon.id)"><i class="fa-solid fa-pen-to-square"></i></a>
+        </div>
         <div class="types">
           <div *ngIf="pokemon?.type0" class="roundType roundType0" style="{{pokemonService.colorType(pokemon?.type0)}}"></div>
           <div *ngIf="pokemon?.type1" class="roundType roundType1" style="{{pokemonService.colorType(pokemon?.type1)}}"></div>

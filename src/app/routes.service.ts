@@ -88,9 +88,9 @@ export class RoutesService {
     });
   }
 
-  editPokemonInEquipe(IdPokemon: any): any {
+  editPokemonInEquipe(id: any, IdPokemon: any): any {
     return new Promise((resolve, reject) => {
-      const apiURL = environment.apiUrl + 'equipe/Edit/:IdPokemon';
+      const apiURL = environment.apiUrl + 'equipe/Edit/' + id;
       this.http
         .post(
           apiURL,
