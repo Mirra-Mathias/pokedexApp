@@ -15,12 +15,16 @@
     font-family: 'Roboto';
     color: black;
     margin: 0;
-    font-weight: 600;
+    font-weight: 500;
 }
 html {
     background-color: var(--background-color);
     overflow-x: hidden;
 }
+
+html, body { height: 100%; }
+/* body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+body { margin: 0; }
 
 a {
     transition: .3s ease-in;
@@ -145,5 +149,4 @@ a {
 }
 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

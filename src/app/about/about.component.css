@@ -1,0 +1,15 @@
+.about {
+    text-align: center;
+    margin-top: 4rem;
+    min-height: calc(100vh - 774px);
+}
+.about h1 {
+    margin: 2rem 0;
+    font-size: 3rem;
+    color: var(--color-3);
+}
+.about h2 {
+    margin: 2rem 0;
+    font-size: 2rem;
+    color: #584771;
+}

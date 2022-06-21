@@ -8,6 +8,7 @@ import {CompteComponent} from "./compte/compte.component";
 import {LoginComponent} from "./login/login.component";
 import {HomeComponent} from "./home/home.component";
 import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {path: 'footer', component: FooterComponent},
@@ -17,7 +18,9 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'inscription', component: InscriptionComponent},
   {path: '', component: HomeComponent},
+  {path: 'qui-sommes-nous', component: AboutComponent},
   {path: 'pokemon', component: PokemonDetailsComponent}];
+  
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
