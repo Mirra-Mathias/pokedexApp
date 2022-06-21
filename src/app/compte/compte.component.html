@@ -1,6 +1,9 @@
 <div class="account container">
+    <div class="title">
+      <h1>Bienvenue {{ userName }}</h1>
+    </div>
     <div class="wrapper-titre">
-      <h1>Mon équipe</h1>
+      <h2>Mon équipe</h2>
       <!-- <div class="btn btn_rose">Créer équipe</div> -->
     </div>
     <div class="container-card">
@@ -9,11 +12,8 @@
          <a (click)="editPokemon(pokemon.id)"><i class="fa-solid fa-pen-to-square"></i></a>
          <img src="{{pokemonService.getImg(pokemon?.idPokemon)}}"/>
       </div>
-      <div *ngIf="equipe.length < 6">
-        <a href="/pokemons" title="Page Pokemons"><i class="fa-solid fa-circle-plus"></i> Ajouter des pokemons</a>
-      </div>
     </div>
-    <div *ngIf="equipe.length < 6">
+    <div class="addButton" *ngIf="equipe.length < 6">
       <a href="/pokemons" title="Page Pokemons"><i class="fa-solid fa-circle-plus"></i> Ajouter des pokemons</a>
     </div>
   </div>

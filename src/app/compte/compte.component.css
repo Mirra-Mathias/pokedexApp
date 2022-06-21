@@ -11,7 +11,13 @@
     justify-items: center;
     gap: 1em;
 }
-
+.container-card .fa-pen-to-square {
+    color: white;
+}
+.addButton {
+    text-align: center;
+    font-size: 1.5rem;
+}
 .card {
     display: flex;
     width:300px;

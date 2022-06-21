@@ -5,6 +5,7 @@ import {BehaviorSubject} from 'rxjs';
 export class GlobalService {
  user = new BehaviorSubject(this.theItem);
  userId = new BehaviorSubject(this.UserId);
+ userName = new BehaviorSubject(this.UserName);
 
  set theItem(value) {
    this.user.next(value); // this will make sure to tell every subscriber about the change.
@@ -18,5 +19,9 @@ export class GlobalService {
  get UserId(){
    return JSON.parse(localStorage.getItem('user')!).id
  }
+
+ get UserName(){
+  return JSON.parse(localStorage.getItem('user')!).name
+}
 
 }

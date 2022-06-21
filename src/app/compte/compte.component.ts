@@ -15,6 +15,7 @@ export class CompteComponent implements OnInit {
 
   public equipe: any;
   public pokemonService: any;
+  public userName: any;
 
   ngOnInit(): void {
     this.routeService.getEquipeDetails(this.globalService.UserId)
@@ -30,6 +31,7 @@ export class CompteComponent implements OnInit {
   // }
 
     this.pokemonService = this.unPokemonService;
+    this.userName = this.globalService.UserName;
   }
 
   editPokemon(id:any){
