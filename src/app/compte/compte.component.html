@@ -6,10 +6,14 @@
     <div class="container-card">
       <div class="card" *ngFor="let pokemon of equipe">
          <h2>{{pokemon.name}}</h2>
-         <img src="{{pokemonService.getImg(pokemon?.idPokemon)}}" />
+         <a (click)="editPokemon(pokemon.id)"><i class="fa-solid fa-pen-to-square"></i></a>
+         <img src="{{pokemonService.getImg(pokemon?.idPokemon)}}"/>
       </div>
       <div *ngIf="equipe.length < 6">
         <a href="/pokemons" title="Page Pokemons"><i class="fa-solid fa-circle-plus"></i> Ajouter des pokemons</a>
       </div>
+    </div>
+    <div *ngIf="equipe.length < 6">
+      <a href="/pokemons" title="Page Pokemons"><i class="fa-solid fa-circle-plus"></i> Ajouter des pokemons</a>
     </div>
   </div>

@@ -2,6 +2,7 @@ import { PokemonsService } from './../pokemons.service';
 import { GlobalService } from './../global.service';
 import { RoutesService } from './../routes.service';
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-compte',
@@ -10,12 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompteComponent implements OnInit {
 
-  constructor(private routeService: RoutesService, private globalService: GlobalService, private unPokemonService: PokemonsService) { }
+  constructor(private routeService: RoutesService, private globalService: GlobalService, private unPokemonService: PokemonsService, private router: Router) { }
 
   public equipe: any;
   public pokemonService: any;
 
-  ngOnInit(): void {  
+  ngOnInit(): void {
     this.routeService.getEquipeDetails(this.globalService.UserId)
     .then((result: any) => {
       this.equipe = result
@@ -28,7 +29,12 @@ export class CompteComponent implements OnInit {
   //   }
   // }
 
-    this.pokemonService = this.unPokemonService; 
+    this.pokemonService = this.unPokemonService;
+  }
+
+  editPokemon(id:any){
+    localStorage.setItem('idCard', id)
+    this.router.navigate(["pokemons"]).then(r => r)
   }
 
 }
