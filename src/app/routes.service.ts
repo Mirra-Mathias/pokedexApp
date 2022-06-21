@@ -109,13 +109,13 @@ export class RoutesService {
     });
   }
 
-  login(user: any, password: any): any {
+  login(Username: any, Password: any): any {
     return new Promise((resolve, reject) => {
       const apiURL = environment.apiUrl + 'api/login';
       this.http
         .post(
           apiURL,
-          {user, password},
+          {Username, Password},
           this.httpOptions
         )
         .toPromise()

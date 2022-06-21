@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   }
 
   get usernameInput() { return this.loginForm.get('username')}
-  get passwordInput() { return this.loginForm.get('password')}  
+  get passwordInput() { return this.loginForm.get('password')}
 
   login() {
     this.routeService.login(this.usernameInput?.value, this.passwordInput?.value)
