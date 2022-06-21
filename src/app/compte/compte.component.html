@@ -8,5 +8,8 @@
          <h2>{{pokemon.name}}</h2>
          <img src="{{pokemonService.getImg(pokemon?.idPokemon)}}" />
       </div>
+      <div *ngIf="equipe.length < 6">
+        <a href="/pokemons" title="Page Pokemons"><i class="fa-solid fa-circle-plus"></i> Ajouter des pokemons</a>
+      </div>
     </div>
   </div>
