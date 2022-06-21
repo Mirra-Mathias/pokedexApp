@@ -13,3 +13,6 @@
     font-size: 2rem;
     color: #584771;
 }
+.about li {
+    list-style-type: none;
+}
