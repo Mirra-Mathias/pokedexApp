@@ -4,9 +4,12 @@
 
     <section class="welcome container">
         <h1>Bienvenue, <br/> Découvrez tous vos <br/> Pokémons favoris !</h1>
-        <div class="loginBanner">
+        <div *ngIf="!user" class="loginBanner">
           <h2>Connectez-vous pour créer votre équipe</h2>
-          <a href="/connexion" title="Page Connexion" class="btn btn_rose">Connexion</a>
+          <a href="/login" title="Page Connexion" class="btn btn_rose">Connexion</a>
+        </div>
+        <div *ngIf="user" class="loginBanner">
+          <h2>Bienvenue {{user.name}} !</h2>
         </div>
       </section>
       <section class="containerListing container">

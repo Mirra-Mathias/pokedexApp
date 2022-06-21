@@ -1,0 +1,32 @@
+.wrapper-titre {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-card {
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    gap: 1em;
+}
+
+.card {
+    display: flex;
+    width:300px;
+    height: 200px;
+    border-radius: 15px;
+    background-color: var(--color-5);;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 1em;
+}
+
+.card img {
+    height: 100%;
+}
+
+.card h2 {
+    color: white;
+    font-weight: 300;
+}

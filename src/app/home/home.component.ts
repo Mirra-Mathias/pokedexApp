@@ -1,3 +1,4 @@
+import { GlobalService } from './../global.service';
 import { Component, OnInit } from '@angular/core';
 import { PokemonsService } from '../pokemons.service';
 import { RoutesService } from '../routes.service';
@@ -22,13 +23,18 @@ export interface Pokemon {
 })
 export class HomeComponent implements OnInit {
   public pokemons: Pokemon[] = [];
-
-  constructor(private route:RoutesService, public pokemonService:PokemonsService, private router: Router) { }
+  public user: any;
+  
+  constructor(private globalSrv: GlobalService, private route:RoutesService, public pokemonService:PokemonsService, private router: Router) { }
 
   ngOnInit(): void {
     this.route.getPokemons("french").then((pokemons:Pokemon[]) => {
       this.pokemons = pokemons
     })
+
+    this.globalSrv.user.subscribe((nextValue: any) => {
+      this.user = nextValue;
+   })
   }
 
   paramsPokemon(id:number | undefined) {
@@ -37,6 +43,4 @@ export class HomeComponent implements OnInit {
     }
     this.router.navigate(["pokemon"], {queryParams: {id}}).then(r => r)
   }
-
-
 }
