@@ -3,11 +3,11 @@
       <form [formGroup]="loginForm">
         <div class="_input">
           <label for="login">Indentifiant</label>
-          <input type="text" name="login" id="login">
+          <input formControlName="username" type="text">
         </div>
         <div class="_input">
           <label for="password">Mot de passe</label>
-          <input type="password" name="password" id="password">
+          <input formControlName="password" type="password">
         </div>
         <button type="submit" (click)="login()" class="btn btn_rose">Connexion</button>
       </form>

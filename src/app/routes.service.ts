@@ -52,7 +52,7 @@ export class RoutesService {
 
   getEquipeDetails(id:any): any {
     return new Promise((resolve, reject) => {
-      const apiURL = environment.apiUrl + 'equipe/Details/:id';
+      const apiURL = environment.apiUrl + 'equipe/Details/' + id;
       this.http
         .get(apiURL)
         .toPromise()
@@ -109,13 +109,16 @@ export class RoutesService {
     });
   }
 
-  login(Username: any, Password: any): any {
+  login(username: any, password: any): any {
     return new Promise((resolve, reject) => {
       const apiURL = environment.apiUrl + 'api/login';
       this.http
         .post(
           apiURL,
-          {Username, Password},
+          {
+            Username: username,
+            Password: password
+          },
           this.httpOptions
         )
         .toPromise()

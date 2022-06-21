@@ -7,9 +7,10 @@
     <a href="/pokemons" title="Page Liste des Pokémons" class="textLink">Pokémons</a>
     <a href="/qui-sommes-nous" title="Page Qui sommes-nous ?" class="textLink">À propos</a>
 </div>
-<div class="links connectionlinks">
-    <a href="/inscription" title="Page S'inscrire" class="signInLink">S'inscrire</a>
-    <a href="/login" title="Page Se connecter" class="connectLink">Se connecter</a>
+<div  class="links connectionlinks">
+    <a *ngIf="!user" href="/inscription" title="Page S'inscrire" class="signInLink">S'inscrire</a>
+    <a *ngIf="!user" href="/login" title="Page Se connecter" class="connectLink">Se connecter</a>
+    <a *ngIf="user" (click)="logout()" class="connectLink">Se déconnecter</a>
 </div>
 </div>
 
