@@ -17,11 +17,15 @@ export class GlobalService {
  }
 
  get UserId(){
-   return JSON.parse(localStorage.getItem('user')!).id
+   if (localStorage.getItem('user')){
+     return JSON.parse(localStorage.getItem('user')!).id
+   }
  }
 
  get UserName(){
-  return JSON.parse(localStorage.getItem('user')!).name
+   if (localStorage.getItem('user')){
+     return JSON.parse(localStorage.getItem('user')!).name
+   }
 }
 
 }
